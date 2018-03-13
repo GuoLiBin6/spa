@@ -46,11 +46,11 @@ window.onload=function(){
   var stop = $('#stop');
   var reset = $('#reset');
   var timer;
-  var i = 0;
+  var j = 0;
 
   start.click(function(){
     timer = window.setInterval(function(){
-      prog_bar.attr('value',i++);
+      prog_bar.attr('value',j++);
      
     },50);
   });
@@ -59,7 +59,7 @@ window.onload=function(){
     clearInterval(timer);
   });
   reset.click(function(){
-    i = 0;
+    j = 0;
     prog_bar.attr('value',0);
   });
 
