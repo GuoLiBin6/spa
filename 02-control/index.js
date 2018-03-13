@@ -45,18 +45,18 @@ window.onload=function(){
   var start = $('#start');
   var stop = $('#stop');
   var reset = $('#reset');
-  var timer;
+  var timer2;
   var j = 0;
 
   start.click(function(){
-    timer = window.setInterval(function(){
+    timer2 = window.setInterval(function(){
       prog_bar.attr('value',j++);
      
     },50);
   });
 
   stop.click(function(){
-    clearInterval(timer);
+    clearInterval(timer2);
   });
   reset.click(function(){
     j = 0;
