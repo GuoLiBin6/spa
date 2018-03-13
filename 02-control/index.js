@@ -1,4 +1,5 @@
 window.onload=function(){
+  //验证码倒计时案例
   var i = 5;
 
   $('#timer-btn').click(function(){
@@ -13,11 +14,58 @@ window.onload=function(){
          $('#timer-btn').removeAttr('disabled');
          i = 5;
       }
-    }
-   
-      ,1000);
-   
-  }); 
+    },1000);
+  });
 
+
+  //密码框可见案例
+  var text = '';
+  $('#pwd').on('input',function(){
+    text = $('#pwd').val();
+  });
+  $('#pwd2').on('input',function(){
+    text = $('#pwd2').val();
+  })
+  $('img').mouseover(function(){
+    $('img').attr('src','img/open-eye.png');
+    $('#pwd').attr('style','display:none');
+    $('#pwd2').attr('style','display:inline-block');
+    $('#pwd2').val(text);
+  });
+  $('img').mouseout(function(){
+    $('img').attr('src','img/close-eye.png');
+    $('#pwd2').attr('style','display:none');
+    $('#pwd').attr('style','display:inline-block');
+    $('#pwd').val(text);
+
+  });
+
+  //进度条案例
+  var prog_bar = $('#prog-bar');
+  var start = $('#start');
+  var stop = $('#stop');
+  var reset = $('#reset');
+  var timer;
+  var i = 0;
+
+  start.click(function(){
+    timer = window.setInterval(function(){
+      prog_bar.attr('value',i++);
+     
+    },50);
+  });
+
+  stop.click(function(){
+    clearInterval(timer);
+  });
+  reset.click(function(){
+    i = 0;
+    prog_bar.attr('value',0);
+  });
+
+  //滑动条案例
+  $('#range').change(function(){
+    $('#val').html('你获取的值是：'+$('#range').val());
+  })
 };
 
