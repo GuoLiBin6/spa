@@ -38,8 +38,10 @@ window.onload = function(){
 function clickFun(){
   var widVal = document.getElementById('rectangle__width').value;
   var heiVal = document.getElementById('rectangle__height').value;
-  document.getElementById('rectangle__area').value = widVal * heiVal;
-  document.getElementById('rectangle__cir').value = 2*parseFloat(widVal)+parseFloat(heiVal)*2;
+  var cir = 2*parseFloat(widVal)+parseFloat(heiVal)*2;
+  var area = widVal * heiVal;
+  document.getElementById('rectangle__area').value = Math.round(area * 100000)/100000;
+  document.getElementById('rectangle__cir').value = Math.round(cir * 100000)/100000;
 }
 
 
