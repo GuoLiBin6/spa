@@ -66,6 +66,6 @@ window.onload=function(){
   //滑动条案例
   $('#range').change(function(){
     $('#val').html('你获取的值是：'+$('#range').val());
-  })
+  });
 };
 

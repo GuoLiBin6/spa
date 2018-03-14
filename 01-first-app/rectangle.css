@@ -5,3 +5,6 @@
   color:#ff0000;
   margin-left: 3em;
 }
+#rectangle__area,#rectangle__cir{
+  background-color:lightgrey;
+}
