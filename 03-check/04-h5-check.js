@@ -16,7 +16,10 @@ window.onload = function(){
       charCheck(rectangle__height,col2);
   }
   //计算按钮点击事件
+ 
   calc.onclick =function(){
+    
+      
       clickFun(rectangle__width,rectangle__height,rectangle__area,rectangle__cir);
   } ;
 };

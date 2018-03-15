@@ -5,12 +5,13 @@
   <title>rectangle</title>
   <link rel="stylesheet" href="01-form-check.css">
   <script src="04-h5-check.js"></script>
+  <script src="../js/jquery-2.2.3.min.js"></script>
  
 </head>
 <body>
 <div class="rectangle">
   <h2 id="h2-1">h5验证</h2>
-  <form action="">
+<form id='form'>
   <label for="">长度：</label>
   <input id="rectangle__width" type="number" min='0' step='0.001' required="required">
   <span id="col1">*</span>
@@ -21,14 +22,14 @@
   <span id="col2">*</span>
   <div id="hei"></div>
   <br>
-  <input id="rectangle__calc" type="submit" value="计算">
+  <input id="rectangle__calc" type="button" value="计算">
+</form>
   <br>
   <label for="">面积：</label>
   <input id="rectangle__area" type="textbox" readonly="true">
   <br>
   <label for="">周长：</label>
   <input id="rectangle__cir" type="textbox" readonly="true">
-</form>
 </div>
 </body>
 </html>
