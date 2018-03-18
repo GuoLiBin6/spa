@@ -12,7 +12,12 @@
   <!---->
   <script type="text/javascript">
 window.onload = function(){
-alert(1)
+    var xData = [],
+        yData = [];
+    for(var i=0;i<10;i+=0.01){
+      xData.push(i);
+      yData.push(Math.sin(i));
+    }
 
     //初始化
     var myChart = echarts.init(document.getElementById('main'));
@@ -26,13 +31,13 @@ alert(1)
           data:['销量']
         },
         xAxis:{
-          data:["衬衫","裤子","帽子","鞋子","袜子"]
+          data:xData
         },
         yAxis: {},
         series:[{
           name:'销量',
-          type:'bar',
-          data:[5,10,15,10,10]
+          type:'line',
+          data:yData
         }]
 
     };
