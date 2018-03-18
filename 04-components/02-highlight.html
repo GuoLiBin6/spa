@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rectangle</title>
+  <link href="../css/art.css">
+  <script type="text/javascript" src="js/jquery-2.2.3.min.js" ></script>
+  <script type="text/javascript" src="js/highlight.pack.js" ></script>
+  <script type="text/javascript">
+  	
+  	hljs.initHighlightingOnLoad();
+  
+  </script>
+   
+</head>
+<body>
+		<textarea name="" id="" cols="30" rows="10">var a =  'a';</textarea>
+		<input type="button" value="添加"/>
+		<!--<div id="div2">
+			<pre class="javascript"><a>a</a></pre>
+		</div>
+		<pre id="pre">
+			<code id="code">
+				<a>a</a>
+			</code>
+		</pre>-->
+</body>
+<script src="//apps.bdimg.com/libs/behave.js/1.5.0/behave.js"></script>
+<script>
+	window.onload=function(){
+  var editor = new Behave({
+    textarea: $('textarea').get(0),
+    replaceTab: true,
+    softTabs: true,
+    tabSize: 2,
+    autoOpen: true,
+    overwrite: true,
+    autoStrip: true,
+    autoIndent: true,
+    fence: false
+  });
+	$('input[type="button"]').click(function() {
+    var $code = $('<div><pre class="javascript"></pre></div>'),
+      $txt = $('textarea');
+
+    if($txt.val() !== '') {
+      $code.find('pre').html($txt.val());
+      hljs.highlightBlock($code.find('pre').get(0));
+      $('body').append($code);
+    }
+//		var code = $('#div2');
+//		hljs.highlightBlock(code);
+//		$('body').append(code);
+});
+	}
+</script>
+<!--<script src="js/echarts.simple.min.js"></script>-->
+</html>
