@@ -18,7 +18,7 @@ window.onload = function(){
   //计算按钮点击事件
  
   calc.onclick =function(){
-    
+      //e.preventDefault();
       
       clickFun(rectangle__width,rectangle__height,rectangle__area,rectangle__cir);
   } ;

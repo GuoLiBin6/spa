@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rectangle</title>
+  <script src="http://apps.bdimg.com/libs/echarts/2.1.9/source/echarts.js"></script>
+   
+</head>
+<body>
+  <!--有大小的dom-->
+  <div id="main" style="width:600px;height:400px;">a</div>
+  <!---->
+  <script>
+window.onload=function(){
+alert(1)
+
+    //初始化
+    var myChart = echarts.init(document.getElementById('main'));
+    //指定图表的配置项和数据
+    var option = {
+        title: {
+          text:'一个小图表'
+        },
+        toolTip:{},
+        legend:{
+          data:['销量']
+        },
+        xAxis:{
+          data:["衬衫","裤子","帽子","鞋子","袜子"]
+        },
+        yAxis: {},
+        series:[{
+          name:'销量',
+          type:'bar',
+          data:[5,10,15,10,10]
+        }]
+
+    };
+    //显示图表
+    myChart.setOption(option);
+}
+  </script>
+</body>
+</html>
