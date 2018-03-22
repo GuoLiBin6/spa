@@ -1,8 +1,8 @@
-function pswView(config){
+//define(['http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'],function(){
+ function pswView(config){
   var $btn = $('<input type="password" id="glbPwd1"><input type="text" id="glbPwd2" style="display:none"><img src="img/close-eye.png">');
   $(config.container).append($btn);
   
-console.log($(config.container).width());
   
   var glbImg = $(config.container+' img')
       glbPwd1 = $('#glbPwd1'),
@@ -31,8 +31,11 @@ console.log($(config.container).width());
     glbPwd1.attr('style','display:inline-block');
     glbPwd1.val(text);
   });
+  
+  this.getPsw=function(){
+    return glbPwd1.val();
+  }
 
-
-  return $btn;
 }
+//});
 
